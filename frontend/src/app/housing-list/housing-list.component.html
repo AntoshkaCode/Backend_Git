@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h2>Housing Listings</h2>
+  
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="text-center mt-4">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="error" class="alert alert-danger mt-3">
+    {{ error }}
+  </div>
+
+  <!-- Housing List -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
+    <div *ngFor="let house of housingData" class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ house.type }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ house.address }}</h6>
+          <div class="card-text">
+            <p><strong>Price:</strong> ${{ house.price | number:'1.0-0' }}</p>
+            <p><strong>Bedrooms:</strong> {{ house.bedrooms }}</p>
+            <p><strong>Bathrooms:</strong> {{ house.bathrooms | number:'1.1-1' }}</p>
+            <p><strong>Square Feet:</strong> {{ house.squareFeet | number:'1.0-0' }} sqft</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

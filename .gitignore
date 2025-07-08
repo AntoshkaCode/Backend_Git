@@ -1,0 +1,59 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+*.idea_modules/
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# VSCode
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Application properties with sensitive data
+**/src/main/resources/application*.properties
+**/src/main/resources/application*.yml
+
+# Local development files
+.env
+*.env
+
+# Build directories
+**/target/
+**/build/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Frontend build directories
+frontend/dist/
+frontend/.angular/
+
+# Database files
+*.db
+*.sql
+*.sqlite
+
+# Temp files
+*.tmp
+*.temp
+
+# System Files
+.DS_Store
+Thumbs.db
