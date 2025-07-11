@@ -31,6 +31,16 @@ public class Housing {
     // Default constructor for JPA
     public Housing() {}
 
+    // Constructor for easy data initialization
+    public Housing(String address, double bathrooms, int bedrooms, double price, int squareFeet, String type) {
+        this.address = address;
+        this.bathrooms = bathrooms;
+        this.bedrooms = bedrooms;
+        this.price = price;
+        this.squareFeet = squareFeet;
+        this.type = type;
+    }
+
     // Getters and Setters
     public Long getId() {
         return id;
